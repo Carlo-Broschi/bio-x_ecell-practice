@@ -3,6 +3,11 @@
 [E-Cell4](https://ecell4.e-cell.org/) を使った細胞シミュレーションの練習リポジトリ。
 決定論（ODE）と確率論（Gillespie）を中心に、反応ネットワークのモデル化を段階的に手を動かして学ぶ。
 
+> **2つのトラック（出所を区別）**:
+> - **`notebooks/` … 自作（非公式）**。題材・モデル・「発展課題」はすべてこのリポジトリのオリジナル（Hfq/sRNA 論文の再現含む）。公式のお墨付きはない。
+> - **`official/` … E-Cell4 公式**。公式ドキュメントのチュートリアル/例題を出典リンクつきで移植したもの。
+> なお **E-Cell4 公式には「練習問題（演習）」は存在しない**（提供されるのはチュートリアルと完成例題）。`notebooks/` 末尾の課題は「発展課題（自作）」と明記している。
+
 ## 環境
 
 - Python 3.14 / macOS arm64（`ecell4_base` の公式 wheel が対応）
@@ -45,6 +50,7 @@ uv run python scripts/01_reversible_reaction.py   # outputs/ に PNG を保存
 | `scripts/04_catalytic_vs_stoichiometric.py` | 04 のスクリプト版 |
 | `scripts/05_consumption_vs_recycling.py` | 05 のスクリプト版 |
 | `solutions/` | 各 notebook 末尾の**発展課題（自作）の解答**（01–14、実行検証済み。詳細は [`solutions/README.md`](solutions/README.md)） |
+| `official/` | **E-Cell4 公式チュートリアル/例題の移植**（出典リンクつき。自作の `notebooks/` とは別トラック。詳細は [`official/README.md`](official/README.md)） |
 | `outputs/` | 生成物（`.gitignore` 済み。再現可能なので追跡しない） |
 
 ### 03 / 04 のポイント
