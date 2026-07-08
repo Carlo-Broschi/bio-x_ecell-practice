@@ -37,6 +37,7 @@ uv run python scripts/01_reversible_reaction.py   # outputs/ に PNG を保存
 | `notebooks/10_cotranscriptional.ipynb` | **論文再現⑤** Reyer 2021。実測パラメータで post-転写だけでは抑制が浅く、共転写制御(α_m→0.46α_m)を足すと実測の深い抑制に合う |
 | `notebooks/11_active_exchange.ipynb` | **論文再現⑥** Park/Fei 2021。Hfqは常時ほぼmRNA占有＋強固な結合。能動交換(sRNAがmRNAを置換)で分単位の応答が可能に |
 | `notebooks/12_active_cycling.ipynb` | **論文再現⑦** Wagner 2013。滞在RNAの見かけ解離速度が競合濃度で上がり飽和（能動循環の指紋、半減期>150分→~1.5分） |
+| `notebooks/13_autoregulation.ipynb` | **論文再現⑧** Morita & Aiba 2019。Hfqが自分のmRNAを抑える負の自己制御→転写8×でも蛋白4×どまり(恒常性)＋応答3倍速 |
 | `scripts/01_reversible_reaction.py`  | 01 のスクリプト版（ヘッドレスで図を保存・動作検証用） |
 | `scripts/02_srna_silencing.py`       | 02 のスクリプト版（応答曲線 + Fano ノイズ図を保存） |
 | `scripts/03_translation_readout.py`  | 03 のスクリプト版 |
