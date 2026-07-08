@@ -27,9 +27,18 @@ uv run python scripts/01_reversible_reaction.py   # outputs/ に PNG を保存
 |---|---|
 | `notebooks/01_getting_started.ipynb` | 可逆反応 A ⇌ B を ODE と Gillespie で解く最初の練習 |
 | `notebooks/02_srna_silencing.ipynb`  | Hfq 依存 sRNA による標的 mRNA 抑制の最小回路（`bio-a` と地続き） |
+| `notebooks/03_translation_readout.ipynb` | 02 に翻訳段 `m→m+P` を追加。sRNA 制御のタンパク質出力への伝播とノイズ濾過 |
+| `notebooks/04_catalytic_vs_stoichiometric.ipynb` | 化学量論 `m+s→∅` vs 触媒 `m+s→s`。応答が閾値スイッチ / MM 的滴定に分岐 |
 | `scripts/01_reversible_reaction.py`  | 01 のスクリプト版（ヘッドレスで図を保存・動作検証用） |
 | `scripts/02_srna_silencing.py`       | 02 のスクリプト版（応答曲線 + Fano ノイズ図を保存） |
+| `scripts/03_translation_readout.py`  | 03 のスクリプト版 |
+| `scripts/04_catalytic_vs_stoichiometric.py` | 04 のスクリプト版 |
 | `outputs/` | 生成物（`.gitignore` 済み。再現可能なので追跡しない） |
+
+### 03 / 04 のポイント
+
+- **03 翻訳段**: `m→m+P`, `P→∅` を追加。タンパク質は `<P>=(k_p/b_p)<m>` で閾値応答を継承。長寿命タンパク質 (`b_p<b_m`) は mRNA ノイズを時間平均で濾過し `CV_P<CV_m` になるが、閾値近傍のノイズ増幅は減衰しつつ伝播する。
+- **04 作用機構**: sRNA が消費される化学量論的共分解 (`m+s→∅`) は鋭い閾値スイッチ、sRNA が再利用される触媒的分解 (`m+s→s`) は `<m>=a_m/(b_m+k_cat·a_s/b_s)` の双曲線（MM 的）でゼロにならない。同じ「抑制」でもデジタル/アナログが分かれる。
 
 ### 02 のポイント（研究との接点）
 
